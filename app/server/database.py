@@ -9,8 +9,6 @@ uri = os.getenv("MONGODB_URI")
 print(uri)
 
 async def init_db():
-    client = motor.motor_asyncio.AsyncIOMotorClient(
-        uri
-    )
+    client = motor.motor_asyncio.AsyncIOMotorClient(uri)
 
     await init_beanie(database=client.Prd_Review, document_models=[ProdReview])

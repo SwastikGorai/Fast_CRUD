@@ -8,7 +8,7 @@ class ProdReview(Document):
     name: str
     product: str
     review: str
-    rating: int
+    rating: float
     date: datetime = datetime.now()
     
     class Settings:
